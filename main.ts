@@ -1,5 +1,5 @@
 basic.forever(function () {
-    if (input.lightLevel() > 100) {
+    if (input.lightLevel() > 200) {
         basic.showLeds(`
             # . # . #
             . # # # .
@@ -7,7 +7,21 @@ basic.forever(function () {
             . # # # .
             # . # . #
             `)
+    } else if (input.lightLevel() > 100) {
+        basic.showLeds(`
+            . . . . .
+            . . # . .
+            . # # # .
+            . . # . .
+            . . . . .
+            `)
     } else {
-        basic.clearScreen()
+        basic.showLeds(`
+            # # # # #
+            # # # # #
+            # # # . .
+            # # # # #
+            # # # # #
+            `)
     }
 })
